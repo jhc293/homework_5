@@ -28,6 +28,8 @@ a.skip{
   padding: 6px;
   position: absolute;
   top: -40px;
+  -webkit-transition: top 1s ease-out;
+  -o-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
 }
@@ -86,10 +88,17 @@ footer{
 /* Cards! */
 .pricing{
     min-height: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     /*Your code here.*/
     /*Don't forget to vertically and horizontally alight the card*/
@@ -103,7 +112,8 @@ footer{
   padding: 0 0 50px 0;
   /*Your code here.*/
   /*Take a look at flex-basis*/
-  flex-basis: 400px;
+  -ms-flex-preferred-size: 400px;
+      flex-basis: 400px;
 }
 
 .card > header{
@@ -141,16 +151,25 @@ footer{
 }
 
 .card_big{
-  transform: initial;
+  -webkit-transform: initial;
+      -ms-transform: initial;
+          transform: initial;
 }
 
 /* Gallery! */
 .gallery{
   min-height: 600px;
+  display:-webkit-box;
+  display:-ms-flexbox;
   display:flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   /*Your code here again.*/
 }
 
@@ -165,16 +184,29 @@ header{
   background: #fff;
   border-bottom: 3px solid #50C7C7;
   /*Your  code here again.*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav_links{
   /*Your code here again.*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .nav_item a{
@@ -194,24 +226,36 @@ header{
   /* Cards! */
   .card {
     /*Your  code here again.*/
-    flex-basis: 225px;
+    -ms-flex-preferred-size: 225px;
+        flex-basis: 225px;
   }
 
   .card_big{
-    transform: scaleX(1.12);
+    -webkit-transform: scaleX(1.12);
+        -ms-transform: scaleX(1.12);
+            transform: scaleX(1.12);
   }
 
   /* Navbar */
   header{
     /*Your code here again.*/  
-    flex-wrap: unset;
-    flex-direction: unset;
-    justify-content: space-between;
+    -ms-flex-wrap: unset;  
+        flex-wrap: unset;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .nav_links{
     /*Your code here again.*/  
-    flex-direction: unset;
+    -webkit-box-orient: unset;  
+    -webkit-box-direction: unset;  
+        -ms-flex-direction: unset;  
+            flex-direction: unset;
   }
 
   .nav_item a{
@@ -221,7 +265,8 @@ header{
 
 @media print { 
   .card {
-    flex-basis: 200px;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
   }
 
   /*Your code here again.*/
@@ -230,8 +275,12 @@ header{
     background-image: none;
   }
   .pricing{
-    align-items: baseline;
-    justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   #gallery{
     display: none;
