@@ -81,7 +81,7 @@ footer{
            animation: logo_wiggle;
    -webkit-animation-duration: 15s;
            animation-duration: 15s;
-    overflow: hidden;
+    object-fit: contain;
 
 
 }
