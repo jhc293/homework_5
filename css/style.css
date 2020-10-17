@@ -76,11 +76,12 @@ footer{
 
 #logo{
    /*Your code here.*/
-   position: relative;
+   display: flex;
    -webkit-animation: logo_wiggle;
            animation: logo_wiggle;
    -webkit-animation-duration: 15s;
            animation-duration: 15s;
+    overflow: hidden;
 
 
 }
